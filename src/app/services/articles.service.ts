@@ -25,4 +25,8 @@ export class ArticlesService {
   deleteArticles(id: number) {
     return this.http.delete<IArticle>(backendURL.articles + '/' + id);
   }
+
+  getArticle(id: string) {
+    return this.http.get<IArticle>(backendURL.articles + '/' + id);
+  }
 }

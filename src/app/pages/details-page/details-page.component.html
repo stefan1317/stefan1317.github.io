@@ -1,1 +1,39 @@
-<p>details-page works!</p>
+<div class="container">
+    <nav class="nav">
+        <ul class="nav__container">
+            <li class="nav__item">
+                <a href="/" class="nav__link">Travel updates</a>
+            </li>
+            <li class="nav__item">
+                <a href="/" class="nav__link">Reviews</a>
+            </li>
+            <li class="nav__item">
+                <a href="/" class="nav__link">About</a>
+            </li>
+            <li class="nav__item">
+                <a href="/" class="nav__link">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <article>
+        <h2 class="title title--details">{{ article.title }}</h2>
+        <ul class="info__container info__container--details">
+            <li class="info__item">{{ article.tag }}</li>
+            <li class="info__item">Added by
+                <span class="info__mark">{{ article.author }}</span>
+            </li>
+            <li class="info__item">{{ article.date }}</li>
+        </ul>
+
+        <img src="{{ article.imgUrl }}" alt="Bike">
+        <div class="content__container">
+            <p>{{ article.content }}</p>
+
+            <p class="saying">{{ article.saying }}}}</p>
+            <p>{{ article.content }}</p>
+        </div>
+    </article>
+    <div class="readmore__container">
+        <button class="button" [routerLink]="['/']">Back</button>
+    </div>
+</div>

@@ -17,6 +17,6 @@
         <p>{{ article.content }}</p>
     </div>
     <div class="readmore__container">
-        <button class="button">Read More</button>
+        <button class="button" [routerLink]="['/details/' + article.id]">Read More</button>
     </div>
 </article>
