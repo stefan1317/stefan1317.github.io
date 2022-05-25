@@ -1,0 +1,11 @@
+<div class="add__container">
+	<button id="add" type="button" class="button" (click) = "toggleModal(true)"> + Add Article</button>
+</div>
+<ul>
+    <li *ngFor="let article of filteredArticleList">
+        <app-article [article]="article" (selectArticle)="selectArticle($event)" (fetchArticles)="fetchArticles()" ></app-article>
+    </li>
+</ul>
+<app-modal [isModalOpen]="isModalOpen" [selectedArticle]="selectedArticle" 
+(toggleModal)="toggleModal($event)" (fetchArticles)="fetchArticles()" 
+(resetSelectedArticle)="resetSelectedArticle()"></app-modal>

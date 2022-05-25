@@ -1,0 +1,25 @@
+<div class="modal__overlay" [ngClass]="{'show-modal': isModalOpen}">
+    <div class="modal">
+        <div class="modal__content">
+            <h2 class="title">Add/Edit article</h2>
+            <div class="inputs__container">
+                <form [formGroup]="articleForm">
+                <input type="text" class="input" placeholder="Please enter title" formControlName="title">
+                <input type="text" class="input" placeholder="Please enter tag" formControlName="tag">
+                <input type="text" class="input" placeholder="Please enter author" formControlName="author">
+                <input type="text" class="input" placeholder="Please enter date" formControlName="date">
+                <input type="text" class="input" placeholder="Please enter image url" formControlName="imgUrl">
+                <input type="text" class="input" placeholder="Please enter saying" formControlName="saying">
+            </form>
+            </div>
+            <form [formGroup]="articleForm">
+            <textarea class="textarea" name="content" cols="28" rows="7"
+                placeholder="Please enter content" formControlName="content"></textarea>
+            </form>
+            <div class="modal__buttons">
+                <button type="button" class="button" (click)="closeModal()">Cancel</button>
+                <button type="button" class="button button--pink" (click)="saveArticle()">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
